@@ -10,7 +10,9 @@ def checktoss():
     n = int(input("Number of times to toss coin?  "))# Ask user how many times to toss a coin
     print("I want to toss the coin :  ", n)
     
-    result_list, heads, tails  = [] , 0, 0 # create empty list to hold coin's results
+    result_list = []  # create empty list to hold coin's results
+    heads = 'H'
+    tails = 'T'
 
     for k in range(n):
         toss = random.randint(1,2)
@@ -22,8 +24,8 @@ def checktoss():
             print("Tails", k)
             result_list.append(tails)
 
-    print((str(result_list)))
-    print(str(result_list.count("Heads are:" )) + str(result_list.count("Tails are:  "))) 
+    print(result_list)  # str not needed
+    print(str(result_list.count(heads)) + " heads and " + str(result_list.count(tails)) + " tails ")
 
 checktoss()           
     
